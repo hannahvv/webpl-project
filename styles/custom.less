@@ -1,0 +1,114 @@
+@uva-blue: #232D4B;
+@uva-orange: #E57200;
+
+// Navbar, Footer and Headers
+.navbar, footer, h1, h2, h3 {
+    background-color: @uva-blue;
+}
+
+// Search bar
+input[type="text"]{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 50%;
+}
+
+
+#email-form, #password-form{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 50%;
+}
+
+// Search Button
+button[type="submit"]{
+    background-color: @uva-orange;
+    color: #ffffff;
+
+    &:hover {
+        background-color: darken(@uva-orange, 10%);
+    }
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+// Card hover
+.card:hover {
+    border: 2px solid @uva-orange;
+}
+
+.card-img-top {
+    height: 100px;
+    object-fit: cover;
+}
+
+.navbar {
+    background-color: @uva-blue;
+    a.nav-link {
+        color: white;
+
+        &:hover {
+            color: white; 
+            border: 1px solid white; 
+            padding: calc(0.5rem - 1px) calc(1rem - 1px); 
+        }
+    }
+}
+
+.navbar-nav .nav-item {
+    margin-right: 10px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.nav-pills .nav-link {
+    color: white;
+}
+
+.nav-pills .nav-link.active {
+    background-color: @uva-blue; 
+    border: 1px solid white; 
+}
+
+.card {
+  .border-radius(10px);
+}
+
+footer.navbar {
+    background-color: @uva-blue;
+    color: white;
+}
+
+.navbar, footer {
+    a, .nav-link {
+        color: white;
+
+        &:hover, &:focus {
+            color: white;
+        }
+    }
+}
+
+// Dropdown Styling
+.dropdown-toggle {
+    height: 38px;  // This is to make sure the dropdowns have the same height as the search field and button.
+    padding: 10px 20px; // Padding to match the search button and field.
+    margin-right: 10px;
+
+    &:focus {
+        box-shadow: none;
+        border-color: @uva-blue;
+        background-color: @uva-blue;
+        color: #ffffff;
+    }
+}
